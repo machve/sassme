@@ -1,0 +1,52 @@
+$yellow-text: #d3a91f;
+$yellow-background: #e3be42;
+$value: 20px;
+$value2: 0;
+html {
+    margin: $value2;
+    padding: $value2;
+}
+
+body {
+    @extend html;
+    font: 100% Helvetica, sans-serif;
+    color: $yellow-text;
+}
+
+ul {
+    list-style: none;
+    li {
+        margin: $value2;
+        display: inline;
+        a {
+            text-decoration:none;
+            color:$yellow-text;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+main {
+    width: 90%;
+    margin: $value2 auto; 
+    background: $yellow-background;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $value / 2;
+    padding: $value /2;
+}
+div {
+    background: #797979;
+    padding: $value /4;
+}
+.myContainers {
+    @extend div;
+    color: #000;
+}
+footer {
+    @extend div;
+    padding:$value;
+    margin-top:$value;
+    color:$yellow-background;
+}
